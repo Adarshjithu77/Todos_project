@@ -14,7 +14,7 @@
 
         <div class="mb-4">
             <input id="todo-input" type="text"
-            placeholder="What needs to be done?" class="w-full border-b border-gray-200 text-lg py-2"/>
+            placeholder="What needs to be done?" class="w-full border-b border-gray-300 focus:outline-none text-lg py-2"/>
         </div>
 
         <ul id="todo-list" class="space-y-2"></ul>
@@ -23,7 +23,13 @@
 
         <div class="flex justify-between items-center text-sm text-gray-500 mt-4">
             <span id="items-left">0items left</span>
-            
+            <div class="flex space-x-2">
+                <button id="filter-all" class="px-2-py-1 rounded hover:bg-gray-200">All</button>
+                <button id="filter-active" class="px-2-py-1 rounded hover:bg-gray-200">Active</button>
+                <button id="filter-completed" class="px-2-py-1 rounded hover:bg-gray-200">Completed</button>
+
+            </div>
+            <button id="clear-completed" class="hover:underline">clear-completed</button>
 
         </div>
 
