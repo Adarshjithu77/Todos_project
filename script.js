@@ -37,3 +37,16 @@
     });
 
 
+    let render = () => {
+      list.innerHTML = '';
+
+      var filteredTodos = [];
+      for (let i = 0; i < todos.length; i++) {
+        if (filter === 'all') {
+          filteredTodos.push(todos[i]);
+        } else if (filter === 'active' && !todos[i].completed) {
+          filteredTodos.push(todos[i]);
+        } else if (filter === 'completed' && todos[i].completed) {
+          filteredTodos.push(todos[i]);
+        }
+      }
