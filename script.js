@@ -69,7 +69,15 @@
           todos[index].completed = !todos[index].completed;
           render();
         });
-        
+        li.getElementsByTagName('button')[0].addEventListener('click', () => {
+          var index = todos.indexOf(todo);
+          todos.splice(index, 1);
+          render();
+        });
+
+        list.appendChild(li);
+
+
       }
     }
 
