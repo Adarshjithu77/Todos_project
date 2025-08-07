@@ -14,3 +14,10 @@
       }
     });
 
+
+    document.getElementById('filter-all').addEventListener('click', () => {
+      filter = 'all';
+      render();
+    });
+
+
