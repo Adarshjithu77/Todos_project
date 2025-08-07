@@ -50,3 +50,30 @@
           filteredTodos.push(todos[i]);
         }
       }
+       for (let i = 0; i < filteredTodos.length; i++) {
+        const todo = filteredTodos[i];
+        const li = document.createElement('li');
+        li.className = 'flex justify-between items-center bg-gray-50 p-2 rounded';
+
+
+        li.innerHTML = `
+          <div class="flex items-center space-x-2">
+            <input type="checkbox" ${todo.completed ? 'checked' : ''} class="w-4 h-4 text-pink-500 rounded focus:ring-pink-400">
+            <span class="${todo.completed ? 'line-through text-gray-400' : ''}">${todo.text}</span>
+          </div>
+          <button class="text-red-400 hover:text-red-600">&times;</button>
+        `;
+
+         li.getElementsByTagName('input')[0].addEventListener('change', () => {
+          var index = todos.indexOf(todo);
+          todos[index].completed = !todos[index].completed;
+          render();
+        });
+        
+      }
+    }
+
+
+       
+
+
