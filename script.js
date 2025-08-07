@@ -25,4 +25,15 @@
         render();
     })
 
+    document.getElementById('clear-completed').addEventListener('click',()=>{
+        let newTodos = [];
+        for(let i=0;i<todos.length;i++){
+            if(!todos[i].completed){
+                newTodos.push(todos[i]);
+            }
+        }
+        todos=newTodos;
+        render();
+    });
+
 
