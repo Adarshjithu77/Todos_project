@@ -20,4 +20,9 @@
       render();
     });
 
+    document.getElementById('filter-completed').addEventListener('click',()=>{
+        filter='completed';
+        render();
+    })
+
 
